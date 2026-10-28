@@ -1,0 +1,12 @@
+asset_id: uav_orthomosaic
+title: "UAV Orthomosaic Survey Register"
+version: "1.0.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: CC-BY-4.0
+abstract: >
+  UAV Orthomosaic Survey Register — curated, versioned and checksummed via GeoVault.
+keywords: ["uav", "orthomosaic", "nir"]
+format: "GeoTIFF"
+provenance:
+  source: "Original research collection, 2026"
+  processing: "Registered and integrity-checked at scaffold time"

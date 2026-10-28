@@ -1,0 +1,7 @@
+# SHA-256 integrity manifest
+# Asset directory: gps_survey
+# Regenerate with: python -m geovault_core.inspector --rehash
+
+cbd216daf71d4a5b4bd24807a94d4d16df6d1d9ebaff15f2f5699450dce56eef  LICENSE.txt
+cb42336d60b08dd28723b8815766502fc7bb171072378e40b30d9adb39d93536  data.csv
+45c8944e3a46e05a53b830f411bb50b20cafc83785e4631f8f6f5211e4eefb87  record.yaml

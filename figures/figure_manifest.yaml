@@ -1,0 +1,39 @@
+# Published-figure provenance map — GeoVault
+# Every published figure must trace to versioned, registered inputs.
+# The inspector verifies each asset_id against inventory/registry.yaml
+# and requires the pinned input version to equal the registered version.
+# When an input version changes, regenerate the figure and update the pin.
+figure_manifest_version: "1.0.0"
+figures:
+  - figure_id: fig_01_demo
+    title: "Sentinel-2 L2A Scene Register Q1 2026 × Landsat 9 Collection 2 Scene Register"
+    outputs: [figures/fig_01_demo.png]
+    inputs:
+      - asset_id: sentinel2_l2a
+        version: "1.0.0"
+      - asset_id: landsat9_c2l2
+        version: "1.1.0"
+  - figure_id: fig_02_demo
+    title: "Landsat 9 Collection 2 Scene Register × UAV Orthomosaic Survey Register"
+    outputs: [figures/fig_02_demo.png]
+    inputs:
+      - asset_id: landsat9_c2l2
+        version: "1.1.0"
+      - asset_id: uav_orthomosaic
+        version: "1.0.0"
+  - figure_id: fig_03_pipeline
+    title: "EO-ML pipeline audit (animated demo)"
+    outputs: [figures/fig_03_pipeline.gif]
+    inputs:
+      - asset_id: sentinel2_l2a
+        version: "1.0.0"
+      - asset_id: landsat9_c2l2
+        version: "1.1.0"
+      - asset_id: uav_orthomosaic
+        version: "1.0.0"
+      - asset_id: dem_cop30
+        version: "1.0.0"
+      - asset_id: landcover_labels
+        version: "2.1.0"
+      - asset_id: gps_survey
+        version: "1.0.0"

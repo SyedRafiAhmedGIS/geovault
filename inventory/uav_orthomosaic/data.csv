@@ -1,0 +1,4 @@
+flight_id,acq_date,sensor,gsd_cm,crs,area_ha
+UAV_2026_004,2026-01-18,Sequoia+,4.2,EPSG:32643,18.6
+UAV_2026_005,2026-02-03,Sequoia+,4.2,EPSG:32643,22.1
+UAV_2026_006,2026-02-19,Sequoia+,3.9,EPSG:32643,19.4

@@ -1,0 +1,33 @@
+# ISO 19115-inspired spatial metadata template — GeoVault
+# Fill one block per spatial asset (scene register, orthomosaic, DEM tile,
+# label raster) and keep it next to the asset's record.yaml. Field names
+# follow ISO 19115-1:2014 concepts so the block can be mapped to a real
+# ISO 19115 or DataCite record later without re-modeling.
+metadata_standard: "ISO 19115-1:2014 (inspired profile)"
+dataset:
+  title: "<scene or tile title>"
+  identifier: "<asset_id from inventory/registry.yaml>"
+  abstract: "<what the product shows and how it was produced>"
+  status: completed
+  language: en
+spatial:
+  reference_system: "EPSG:32643"      # CRS of the delivered rasters/vectors
+  extent_bbox: [0.0, 0.0, 0.0, 0.0]   # [min_lon, min_lat, max_lon, max_lat]
+  resolution_m: 10                    # ground sample distance
+  representation_type: grid           # grid | vector
+citation:
+  citation_standard: DataCite
+  doi: "<register via Zenodo/DataCite after the first release>"
+lineage:
+  source_platforms: ["Sentinel-2", "Landsat 9", "UAV"]
+  processing_steps:
+    - "atmospheric correction"
+    - "cloud masking"
+    - "CRS harmonisation"
+  statement: "Derived products trace to the pinned scene versions in figures/figure_manifest.yaml."
+distribution:
+  formats: ["GeoTIFF", "NetCDF", "CSV"]
+  checksum_file: integrity.sha256
+constraints:
+  access: open
+  license_ref: CC-BY-4.0

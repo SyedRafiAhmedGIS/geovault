@@ -1,0 +1,5 @@
+plot_id,lat,lon,obs_date,landcover,sample_source
+PLT_0001,17.3850,78.4867,2026-01-22,urban,field_survey
+PLT_0002,17.4126,78.5210,2026-01-22,water,sentinel_2
+PLT_0003,17.3394,78.5522,2026-01-29,vegetation,field_survey
+PLT_0004,17.3601,78.4479,2026-02-05,agriculture,drone_ortho

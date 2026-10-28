@@ -1,0 +1,12 @@
+asset_id: landsat9_c2l2
+title: "Landsat 9 Collection 2 Scene Register"
+version: "1.1.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: CC0-1.0
+abstract: >
+  Landsat 9 Collection 2 Scene Register — curated, versioned and checksummed via GeoVault.
+keywords: ["landsat-9", "multispectral", "usgs"]
+format: "GeoTIFF + CSV scene index"
+provenance:
+  source: "Original research collection, 2026"
+  processing: "Registered and integrity-checked at scaffold time"

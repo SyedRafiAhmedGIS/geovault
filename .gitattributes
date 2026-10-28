@@ -1,0 +1,29 @@
+# Cross-platform hash stability: normalize text and force LF on files
+# covered by SHA-256 integrity manifests.
+* text=auto
+
+*.csv text eol=lf
+*.tsv text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.cff text eol=lf
+*.txt text eol=lf
+*.sha256 text eol=lf
+*.ipynb text eol=lf
+Makefile text eol=lf
+LICENSE text eol=lf
+
+# Binary assets are never normalized.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.h5 binary
+*.nc binary
+*.parquet binary

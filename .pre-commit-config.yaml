@@ -1,0 +1,17 @@
+# Self-contained pre-commit configuration: hooks run local tooling only,
+# so no external hook repositories are downloaded.
+repos:
+  - repo: local
+    hooks:
+      - id: compliance-inspector
+        name: GeoVault compliance audit (strict)
+        entry: python -m geovault_core.inspector --strict
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+      - id: pytest-suite
+        name: pytest compliance suite
+        entry: python -m pytest tests/ -q
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

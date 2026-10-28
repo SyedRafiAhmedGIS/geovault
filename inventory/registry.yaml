@@ -1,0 +1,43 @@
+# Master Asset Registry — GeoVault
+# Maintained by Syed Rafi Ahmed (RS/GIS/ML Lab)
+# Every research asset is registered here before it can pass the audit.
+registry_version: "1.0.0"
+institution: "RS/GIS/ML Lab"
+maintainer: "Syed Rafi Ahmed"
+assets:
+  - asset_id: sentinel2_l2a
+    location: inventory/sentinel2_l2a
+    title: "Sentinel-2 L2A Scene Register Q1 2026"
+    version: "1.0.0"
+    license_ref: CC-BY-4.0
+    custodian: "Syed Rafi Ahmed"
+  - asset_id: landsat9_c2l2
+    location: inventory/landsat9_c2l2
+    title: "Landsat 9 Collection 2 Scene Register"
+    version: "1.1.0"
+    license_ref: CC0-1.0
+    custodian: "Syed Rafi Ahmed"
+  - asset_id: uav_orthomosaic
+    location: inventory/uav_orthomosaic
+    title: "UAV Orthomosaic Survey Register"
+    version: "1.0.0"
+    license_ref: CC-BY-4.0
+    custodian: "Syed Rafi Ahmed"
+  - asset_id: dem_cop30
+    location: inventory/dem_cop30
+    title: "Copernicus DEM 30 m Tile Register"
+    version: "1.0.0"
+    license_ref: CC0-1.0
+    custodian: "Syed Rafi Ahmed"
+  - asset_id: landcover_labels
+    location: inventory/landcover_labels
+    title: "Land-Cover Training Labels v2"
+    version: "2.1.0"
+    license_ref: CC-BY-4.0
+    custodian: "Syed Rafi Ahmed"
+  - asset_id: gps_survey
+    location: inventory/gps_survey
+    title: "Ground-Truth GPS Survey Points"
+    version: "1.0.0"
+    license_ref: CC-BY-SA-4.0
+    custodian: "Syed Rafi Ahmed"

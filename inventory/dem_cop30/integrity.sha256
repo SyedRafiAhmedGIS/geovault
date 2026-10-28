@@ -1,0 +1,7 @@
+# SHA-256 integrity manifest
+# Asset directory: dem_cop30
+# Regenerate with: python -m geovault_core.inspector --rehash
+
+c5137419681f7e5214f7ed87410d46cb8560075d7aaeb8f3f0bb64e60387eece  LICENSE.txt
+dabac9727564a1bcc0d16c673b63564da0278a767eff36a79351f1a6aa460e17  data.csv
+ef614bd661afe214a293c2d7afd752aac45b95abf627af73778172f259b4c03d  record.yaml

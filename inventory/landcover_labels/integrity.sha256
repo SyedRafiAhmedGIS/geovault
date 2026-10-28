@@ -1,0 +1,7 @@
+# SHA-256 integrity manifest
+# Asset directory: landcover_labels
+# Regenerate with: python -m geovault_core.inspector --rehash
+
+0775a3f693b4ab708e38771e4483af52fddcde0e98307effe35819d79e865a56  LICENSE.txt
+778728161787899a1d38da10712b59103fa7835d656e9e2a31a39a39829dcefa  data.csv
+9d06d6155ed36a34302e8fa71e3a3da75f26424ec67c0bc32672c78021761cd5  record.yaml

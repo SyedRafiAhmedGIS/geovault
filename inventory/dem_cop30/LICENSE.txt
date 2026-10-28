@@ -1,0 +1,10 @@
+Dataset: Copernicus DEM 30 m Tile Register
+Asset ID: dem_cop30
+Version: 1.0.0
+Custodian: Syed Rafi Ahmed
+License: CC0-1.0
+
+This dataset is distributed under the CC0-1.0 license listed in the
+institutional rights catalog (policies/rights_catalog.yaml) of GeoVault.
+Reuse requires attribution as defined by that license; consult the catalog
+entry for the canonical license text and redistribution terms.

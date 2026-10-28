@@ -1,0 +1,7 @@
+# SHA-256 integrity manifest
+# Asset directory: uav_orthomosaic
+# Regenerate with: python -m geovault_core.inspector --rehash
+
+f0ea9c091a99aec68a38b5518699c5affad56d6420f2745efb59974324f4cdfa  LICENSE.txt
+c848e5231bdfe58c13184a13dcc848eeb8516c85d8c99a55954ec960e29466ab  data.csv
+9308bf1b3f0fef452a7ca300312dfdaad0bf4f8f1d0119b46eb3f13c7b7cb778  record.yaml

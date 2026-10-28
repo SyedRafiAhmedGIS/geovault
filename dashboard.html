@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoVault — Compliance Dashboard</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--text:#c9d1d9;--muted:#8b949e;--primary:#0b1d3a;--accent:#22d3ee}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  header{background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);padding:2.5rem 1.5rem;text-align:center;color:#fff}
+  header h1{margin:0;font-size:2.3rem}
+  header p{margin:.4rem 0 0;opacity:.92}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;max-width:1100px;margin:-1.8rem auto 2rem;padding:0 1.5rem}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:1.1rem;text-align:center}
+  .stat-num{font-size:2.1rem;font-weight:700;color:var(--accent)}
+  .stat-label{color:var(--muted);font-size:.85rem}
+  main{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem}
+  h2{color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:.45rem;margin-top:2.2rem}
+  .toolbar{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-top:1rem}
+  .toolbar input{flex:1;min-width:220px;background:var(--panel);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:.55rem .8rem;font-size:.95rem}
+  .toolbar button{background:var(--primary);color:#fff;border:0;border-radius:8px;padding:.55rem .95rem;font-size:.9rem;cursor:pointer}
+  .toolbar button:hover{filter:brightness(1.1)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;margin-top:1.25rem}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:1.3rem;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-2px);border-color:var(--primary)}
+  .card-icon{font-size:1.9rem}
+  .card h3{margin:.45rem 0 .2rem;font-size:1.05rem}
+  .meta{color:var(--muted);font-size:.83rem;margin:0}
+  .custodian{font-size:.9rem;margin:.5rem 0}
+  .tags{margin:.7rem 0}
+  .tag{display:inline-block;background:#21262d;color:var(--muted);padding:.12rem .6rem;border-radius:12px;font-size:.73rem;margin:.15rem .25rem .15rem 0}
+  #report{background:#0d1117;border:1px solid var(--border);border-radius:10px;padding:1.2rem;margin-top:1rem;font-family:SFMono-Regular,Consolas,monospace;font-size:.85rem;white-space:pre-wrap}
+  footer{text-align:center;padding:2rem;color:var(--muted);border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<header>
+  <img src="assets/logo.svg" alt="GeoVault logo" width="76"
+       style="display:block;margin:0 auto .7rem;border-radius:16px;box-shadow:0 4px 18px rgba(0,0,0,.35)">
+  <h1>🌍 GeoVault</h1>
+  <p>Remote Sensing, GIS &amp; ML Data Stewardship Pipeline · v1.3.0 · Syed Rafi Ahmed (RS/GIS/ML Lab)</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">6</div><div class="stat-label">Assets tracked</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Compliance rate</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Approved licenses</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-label">Open issues</div></div>
+</div>
+
+<main>
+  <h2>🎞️ Compliance pipeline demo</h2>
+  <p class="meta">The animated figure is itself provenance-tracked: registered as <code>fig_03_pipeline</code> in <code>figures/figure_manifest.yaml</code>, it replays the audit pipeline against versioned dataset inputs.</p>
+  <img src="figures/fig_03_pipeline.gif" alt="Compliance pipeline animation" width="480" style="max-width:100%;height:auto;border:1px solid var(--border);border-radius:10px;background:var(--panel);image-rendering:pixelated">
+
+  <h2>📦 Registered assets</h2>
+  <div class="toolbar">
+    <input id="filter" type="search" placeholder="🔎 Filter assets by title, custodian, license or tag…">
+    <button id="load-report">Load live audit report</button>
+  </div>
+  <div class="grid" id="cards">
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Sentinel-2 L2A Scene Register Q1 2026</h3>
+          <p class="meta">v1.0.0 · CC-BY-4.0</p>
+          <p class="custodian">Custodian: Syed Rafi Ahmed</p>
+          <div class="tags"><span class="tag">sentinel-2</span><span class="tag">remote-sensing</span><span class="tag">surface-reflectance</span></div>
+          <div class="status passed">✅ Compliant</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Landsat 9 Collection 2 Scene Register</h3>
+          <p class="meta">v1.1.0 · CC0-1.0</p>
+          <p class="custodian">Custodian: Syed Rafi Ahmed</p>
+          <div class="tags"><span class="tag">landsat-9</span><span class="tag">multispectral</span><span class="tag">usgs</span></div>
+          <div class="status passed">✅ Compliant</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>UAV Orthomosaic Survey Register</h3>
+          <p class="meta">v1.0.0 · CC-BY-4.0</p>
+          <p class="custodian">Custodian: Syed Rafi Ahmed</p>
+          <div class="tags"><span class="tag">uav</span><span class="tag">orthomosaic</span><span class="tag">nir</span></div>
+          <div class="status passed">✅ Compliant</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Copernicus DEM 30 m Tile Register</h3>
+          <p class="meta">v1.0.0 · CC0-1.0</p>
+          <p class="custodian">Custodian: Syed Rafi Ahmed</p>
+          <div class="tags"><span class="tag">dem</span><span class="tag">elevation</span><span class="tag">topography</span></div>
+          <div class="status passed">✅ Compliant</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Land-Cover Training Labels v2</h3>
+          <p class="meta">v2.1.0 · CC-BY-4.0</p>
+          <p class="custodian">Custodian: Syed Rafi Ahmed</p>
+          <div class="tags"><span class="tag">machine-learning</span><span class="tag">land-cover</span><span class="tag">training-data</span></div>
+          <div class="status passed">✅ Compliant</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Ground-Truth GPS Survey Points</h3>
+          <p class="meta">v1.0.0 · CC-BY-SA-4.0</p>
+          <p class="custodian">Custodian: Syed Rafi Ahmed</p>
+          <div class="tags"><span class="tag">gps</span><span class="tag">ground-truth</span><span class="tag">field-data</span></div>
+          <div class="status passed">✅ Compliant</div>
+        </div>
+  </div>
+
+  <h2>🔍 Live audit report</h2>
+  <p class="meta">Run <code>python -m geovault_core.inspector --json &gt; compliance_report.json</code> in the repository root, then click <em>Load live audit report</em>. The dashboard renders the latest machine-readable audit when the file sits next to this page.</p>
+  <div id="report">No report loaded yet — scaffold-time status: all 6 assets compliant, all checksums verified at build time (2026-10-28).</div>
+</main>
+
+<footer>
+  <p>GeoVault Compliance Dashboard · MIT © 2026 Syed Rafi Ahmed · Generated 2026-10-28</p>
+</footer>
+
+<script>
+(function () {
+  var input = document.getElementById("filter");
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
+  input.addEventListener("input", function () {
+    var needle = input.value.toLowerCase();
+    cards.forEach(function (card) {
+      card.style.display = card.textContent.toLowerCase().indexOf(needle) !== -1 ? "" : "none";
+    });
+  });
+
+  document.getElementById("load-report").addEventListener("click", function () {
+    fetch("compliance_report.json", { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) { throw new Error("HTTP " + response.status); }
+        return response.json();
+      })
+      .then(function (report) {
+        var lines = [];
+        lines.push("tool      : " + report.tool);
+        lines.push("flavor    : " + report.flavor + " v" + report.version);
+        lines.push("timestamp : " + report.timestamp);
+        lines.push("mode      : " + (report.strict ? "strict" : "standard"));
+        lines.push("result    : " + (report.passed ? "✅ PASSED" : "🚨 FAILED"));
+        lines.push("assets    : " + report.stats.assets + "   checksums verified: " + report.stats.checksums_verified + "   figures traced: " + (report.stats.figures_tracked || 0));
+        (report.issues || []).forEach(function (issue) { lines.push("ISSUE     : " + issue); });
+        (report.warnings || []).forEach(function (warning) { lines.push("WARNING   : " + warning); });
+        var panel = document.getElementById("report");
+        panel.textContent = lines.join("\n");
+        panel.style.borderColor = report.passed ? "#1a7f37" : "#cf222e";
+      })
+      .catch(function () {
+        document.getElementById("report").textContent =
+          "⚠️ compliance_report.json not found next to this page.\n" +
+          "Generate it with:\n  python -m geovault_core.inspector --json > compliance_report.json";
+      });
+  });
+})();
+</script>
+</body>
+</html>

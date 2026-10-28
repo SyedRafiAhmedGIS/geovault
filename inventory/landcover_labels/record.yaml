@@ -1,0 +1,12 @@
+asset_id: landcover_labels
+title: "Land-Cover Training Labels v2"
+version: "2.1.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: CC-BY-4.0
+abstract: >
+  Land-Cover Training Labels v2 — curated, versioned and checksummed via GeoVault.
+keywords: ["machine-learning", "land-cover", "training-data"]
+format: "CSV + GeoJSON polygons"
+provenance:
+  source: "Original research collection, 2026"
+  processing: "Registered and integrity-checked at scaffold time"

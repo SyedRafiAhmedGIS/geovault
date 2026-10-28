@@ -1,0 +1,4 @@
+tile_id,source,resolution_m,crs,version
+N43E001,Copernicus DEM GLO-30,30,EPSG:4326,2023_1
+N43E002,Copernicus DEM GLO-30,30,EPSG:4326,2023_1
+N44E001,Copernicus DEM GLO-30,30,EPSG:4326,2023_1

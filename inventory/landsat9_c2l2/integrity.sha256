@@ -1,0 +1,7 @@
+# SHA-256 integrity manifest
+# Asset directory: landsat9_c2l2
+# Regenerate with: python -m geovault_core.inspector --rehash
+
+7f6618f7476e1faade717e6846d754af292ff4f49dfbc26ce7deb24843e4350e  LICENSE.txt
+5ac65e9d4d39bc455c8fece705f97372e49c023cf8a09a1d5d5e5650e0a073f5  data.csv
+5007ad8719ceef25911481e681a04a9af06a31de092bd7aaaccf577a899567ee  record.yaml

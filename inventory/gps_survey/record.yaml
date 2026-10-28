@@ -1,0 +1,12 @@
+asset_id: gps_survey
+title: "Ground-Truth GPS Survey Points"
+version: "1.0.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: CC-BY-SA-4.0
+abstract: >
+  Ground-Truth GPS Survey Points — curated, versioned and checksummed via GeoVault.
+keywords: ["gps", "ground-truth", "field-data"]
+format: "CSV"
+provenance:
+  source: "Original research collection, 2026"
+  processing: "Registered and integrity-checked at scaffold time"

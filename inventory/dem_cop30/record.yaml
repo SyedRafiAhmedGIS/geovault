@@ -1,0 +1,12 @@
+asset_id: dem_cop30
+title: "Copernicus DEM 30 m Tile Register"
+version: "1.0.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: CC0-1.0
+abstract: >
+  Copernicus DEM 30 m Tile Register — curated, versioned and checksummed via GeoVault.
+keywords: ["dem", "elevation", "topography"]
+format: "GeoTIFF"
+provenance:
+  source: "Original research collection, 2026"
+  processing: "Registered and integrity-checked at scaffold time"

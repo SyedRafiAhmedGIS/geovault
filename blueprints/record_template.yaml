@@ -1,0 +1,18 @@
+# Record template — copy into inventory/<asset_id>/record.yaml and fill in.
+asset_id: <unique_snake_case_id>
+title: "<Human readable title>"
+version: "0.1.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: "<Must be approved in policies/rights_catalog.yaml>"
+abstract: >
+  <Describe what the dataset contains, how it was collected, and its
+  intended reuse.>
+keywords: [keyword1, keyword2]
+format: CSV
+provenance:
+  source: "<Origin of the data>"
+  processing: "<Transformations applied before registration>"
+  # Optional: registered, versioned inputs this asset was derived from.
+  # derived_from:
+  #   - asset_id: <registered_asset_id>
+  #     version: "<MAJOR.MINOR.PATCH>"

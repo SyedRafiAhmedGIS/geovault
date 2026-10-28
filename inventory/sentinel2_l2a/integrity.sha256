@@ -1,0 +1,7 @@
+# SHA-256 integrity manifest
+# Asset directory: sentinel2_l2a
+# Regenerate with: python -m geovault_core.inspector --rehash
+
+cc3c92f11622cf9f0ae363953a11d46890800b68a589f96e38fe667cd041651a  LICENSE.txt
+82fb4492d506d400a63e4c07a07bc1088e9b68b7c789a8c17147762b2e977b9b  data.csv
+a1691b1e41dd36aaf71e27e025ef34e4515a15a4ff59a06cb131fe248900360e  record.yaml

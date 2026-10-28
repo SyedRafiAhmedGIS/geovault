@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use GeoVault in your research, please cite it using this metadata."
+title: "GeoVault: Remote Sensing, GIS & ML Data Stewardship Pipeline"
+version: 1.3.0
+date-released: "2026-10-28"
+authors:
+  - family-names: "Ahmed"
+    given-names: "Syed Rafi"
+    affiliation: "RS/GIS/ML Lab"
+abstract: "A stewardship toolkit for Earth-observation and geospatial machine learning: Sentinel-2, Landsat 9, UAV orthomosaic and DEM assets governed with FAIR + ISO 19115 metadata, DataCite-ready citation, cryptographic SHA-256 integrity and a provenance-tracked download-to-publish pipeline."
+license: MIT
+keywords:
+  - research-data
+  - data-stewardship
+  - data-governance

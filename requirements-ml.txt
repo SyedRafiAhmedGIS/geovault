@@ -1,0 +1,16 @@
+# GeoVault optional geo-ML stack (heavy — install only what your pipeline needs)
+#
+#   pip install -r requirements-ml.txt
+#
+# Core geospatial + ML tooling used around the toolkit. The stewardship
+# engine itself only needs pyyaml (see requirements.txt).
+numpy>=1.24
+pandas>=2.0
+rasterio>=1.3
+geopandas>=0.14
+xarray>=2024.1
+netcdf4>=1.6
+scikit-learn>=1.4
+# ML backends — pick ONE and uncomment:
+# torch>=2.2
+# tensorflow>=2.16

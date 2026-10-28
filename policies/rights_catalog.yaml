@@ -1,0 +1,15 @@
+# Institutional Rights Catalog
+# Licenses a dataset may declare in record.yaml: license_ref.
+approved_licenses:
+  - id: MIT
+    name: "MIT License"
+    url: https://opensource.org/licenses/MIT
+  - id: CC-BY-4.0
+    name: "Creative Commons Attribution 4.0 International"
+    url: https://creativecommons.org/licenses/by/4.0/
+  - id: CC-BY-SA-4.0
+    name: "Creative Commons Attribution-ShareAlike 4.0 International"
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+  - id: CC0-1.0
+    name: "Creative Commons CC0 1.0 Universal (Public Domain Dedication)"
+    url: https://creativecommons.org/publicdomain/zero/1.0/

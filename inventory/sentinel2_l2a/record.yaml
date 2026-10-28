@@ -1,0 +1,12 @@
+asset_id: sentinel2_l2a
+title: "Sentinel-2 L2A Scene Register Q1 2026"
+version: "1.0.0"
+custodian: "Syed Rafi Ahmed"
+license_ref: CC-BY-4.0
+abstract: >
+  Sentinel-2 L2A Scene Register Q1 2026 — curated, versioned and checksummed via GeoVault.
+keywords: ["sentinel-2", "remote-sensing", "surface-reflectance"]
+format: "GeoTIFF + CSV scene index"
+provenance:
+  source: "Original research collection, 2026"
+  processing: "Registered and integrity-checked at scaffold time"

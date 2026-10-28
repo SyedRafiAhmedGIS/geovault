@@ -1,0 +1,47 @@
+name: "GeoVault Compliance Gate"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  compliance:
+    name: Audit & test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compliance audit (strict)
+        run: python -m geovault_core.inspector --strict
+
+      - name: Compliance audit (JSON report)
+        run: python -m geovault_core.inspector --json > compliance_report.json
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compliance-report-py${{ matrix.python-version }}
+          path: compliance_report.json
+          if-no-files-found: ignore
+
+      - name: Run test suite
+        run: pytest tests/ -v
